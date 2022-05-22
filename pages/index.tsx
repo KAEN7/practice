@@ -1,5 +1,9 @@
+import MainSlider from "../components/MainSlider";
+
 const index = () => {
-	return <></>;
+	const banner = { bannerItem: [] };
+
+	return <MainSlider banner={banner}></MainSlider>;
 };
 
 export default index;
