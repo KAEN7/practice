@@ -11,7 +11,12 @@ const HomeSection = styled.section`
 
 const index = () => {
 	let startTime = Date.now();
+
+	let today = new Date();
+
+	console.log("startTime", today.setMilliseconds());
 	let setTime = 86400000;
+	// let setTime = 86400000;
 
 	return (
 		<HomeSection>
