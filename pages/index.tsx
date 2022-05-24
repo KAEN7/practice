@@ -1,28 +1,19 @@
 import styled from "styled-components";
 import { flexCenter } from "../style/theme";
-
-import Countdown from "react-countdown";
+import { Canvas, useFrame } from "@react-three/fiber";
+// import { orbitControls} from '@react-three/drei'
+import Meshes from "../components/Meshes";
 
 const HomeSection = styled.section`
 	${flexCenter}
 `;
 
-// https://www.npmjs.com/package/react-countdown
-
 const index = () => {
-	let startTime = Date.now();
-
-	let today = new Date();
-
-	console.log("startTime", today.setMilliseconds());
-	let setTime = 86400000;
-	// let setTime = 86400000;
-
 	return (
 		<HomeSection>
-			<Countdown date={startTime + setTime}>
-				<span>test</span>
-			</Countdown>
+			<Canvas>
+				<Meshes />
+			</Canvas>
 		</HomeSection>
 	);
 };
