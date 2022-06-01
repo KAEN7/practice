@@ -8,9 +8,10 @@
 // frame는 three.js로 제작한 material에 애니메이션 효과를 부여하며 frame을 정의할 수 있음
 import styled from "styled-components";
 import { flexCenter } from "../style/theme";
-import { Canvas, useFrame } from "@react-three/fiber";
 // import { orbitControls} from '@react-three/drei'
-import Meshes from "../components/Meshes";
+import Meshes from "./Meshes";
+import Link from "next/link";
+import Article from "./Article";
 
 const HomeSection = styled.section`
 	${flexCenter}
@@ -19,9 +20,17 @@ const HomeSection = styled.section`
 const index = () => {
 	return (
 		<HomeSection>
-			<Canvas>
-				<Meshes />
-			</Canvas>
+			<Link href="/meshes">
+				<a>meshes</a>
+			</Link>
+			<Link href="/article">
+				<a>Article</a>
+			</Link>
+
+			{/* <BrowserRouter>
+				<Route exact path="/" component={<Article></Article>} />
+				<Route exact path="/" component={<Meshes></Meshes>} />
+			</BrowserRouter> */}
 		</HomeSection>
 	);
 };
